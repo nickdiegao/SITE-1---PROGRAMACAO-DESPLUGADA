@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Desplugada</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #1C0A00;
+        }
+        
+        .menu {
+            width: 15%;
+            padding: 20px;
+            background-color: #361500; /* Cor de fundo do menu */
+            height: 100%;
+            border-bottom: 40px solid  #361500;
+        }
+        
+        .conteudo {
+            width: 65%; /* Largura da coluna de conteúdo (tabela) */
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: 0 auto; /* Centraliza a tabela horizontalmente na coluna de conteúdo */
+        }
+        
+        table, th, td {
+            border: 4px solid white;
+        }
+
+        .menu img{
+            position: absolute;
+            
+        }
+
+        .seta-diagonal-direita{
+            width: 175px;
+            left: 80px;
+            bottom: 480px;
+        }
+        
+        .seta-diagonal-esquerda{
+            width: 175px;
+            left: -14px;
+            bottom: 480px;
+        }
+
+        .seta-direita{
+            width: 65px;
+            bottom: 420px;
+            left: 135px;
+        }
+
+        .seta-esquerda{
+            width: 65px;
+            bottom: 420px;
+            left: 43px;
+        }
+
+        .seta-cima{
+            width: 65px;
+            bottom: 330px;
+            left: 43px;
+        }
+
+        .seta-baixo{
+            width: 65px;
+            bottom: 330px;
+            left: 135px;
+        }
+
+        th, td {
+            padding: 33px;
+            background-color: #CC9544;
+        }
+
+        .menu h3{
+            color: white;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 900;
+            padding: 20px;
+            position: relative;
+            top: 8px;
+            left: 17px;
+        }
+
+        .lobo{
+            width: 140px;
+            bottom: 170px;
+            left: 50px;
+        }
+
+        .grama{
+            width: 330px;
+            bottom: -32px;
+            left: -43px;
+            position: fixed;
+        }
+
+        .menu-direito{
+            width: 15%;
+            height: 100%;
+            padding: 20px;
+        }
+
+        .menu-direito img{
+            position: absolute;
+        }
+
+        .porco-vermelho{
+            width: 190px;
+            top: 70px;
+            right: 0px;
+        }
+
+        .porco-azul{
+            width: 190px;
+            top: 70px;
+            right: 100px;
+        }
+
+        .porco-verde{
+            width: 190px;
+            top: 180px;
+            right: 40px;
+            border-bottom: 4px solid white;
+        }
+
+        .imagens-casas{
+            position: absolute;
+        }
+
+        .casa-tijolo{
+            width: 90px;
+            top: 320px;
+            left: 35px;
+        }
+        
+        .casa-madeira{
+            width: 90px;
+            top: 430px;
+            left: 100px;
+        }
+
+        .casa-palha{
+            width: 120px;
+            top: 440px;
+            left: -27px;
+        }
+
+        .prg{
+            position: fixed;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 12px;
+            bottom: 4px;
+            right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="menu">
+
+        <h3>FERRAMENTAS</h3>
+        
+        <div class="setas">
+            <div class="imagem-item">
+                <img src="https://raw.githubusercontent.com/nickdiegao/imagens/main/SETA%20DIAGONAL%20DIREITA.png" alt="seta-diagonal-direita" class="seta-diagonal-direita">
+            </div>
+            <div class="imagem-item">
+                <img src="https://raw.githubusercontent.com/nickdiegao/imagens/main/SETA%20DIAGONAL%20ESQUERDA.png" alt="seta-diagonal-esquerda" class="seta-diagonal-esquerda">
+            </div>
+            <div class="imagem-item">
+                <img src="https://raw.githubusercontent.com/nickdiegao/imagens/main/WhatsApp%20Image%202023-10-26%20at%2000.52.41.jpeg" alt="seta direita" class="seta-direita">
+            </div>
+            <div class="imagem-item">
+                <img src="https://raw.githubusercontent.com/nickdiegao/imagens/main/WhatsApp%20Image%202023-10-26%20at%2000.52.54.jpeg" alt="seta-esquerda" class="seta-esquerda">
+            </div>
+            <div class="imagem-item">
+                <img src="https://raw.githubusercontent.com/nickdiegao/imagens/main/WhatsApp%20Image%202023-10-26%20at%2000.52.45.jpeg" alt="seta cima" class="seta-cima">
+            </div>
+            <div class="imagem-item">
+                <img src="https://raw.githubusercontent.com/nickdiegao/imagens/main/WhatsApp%20Image%202023-10-26%20at%2000.53.05.jpeg" alt="" class="seta-baixo">
+            </div>
+        </div>
+
+        <div class="imagem-item">
+            <img src="https://raw.githubusercontent.com/nickdiegao/imagens/8bf4593fbc6ef6900ba091c265339e5520492fe7/6e17d680f18fc20e572cb9799181feeb.jpg" alt="lobo" class="lobo">
+        </div>
+
+        <div class="imagem-item">
+            <img src="https://raw.githubusercontent.com/nickdiegao/imagens/main/GRAMA.png" alt="GRAMA" class="grama">
+        </div>
+
+    </div>
+
+    <div class="conteudo">
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="menu-direito">
+
+        <div class="imagens-porcos">
+            <div class="porcos"> 
+                <img src="https://raw.githubusercontent.com/nickdiegao/imagens/main/porquinhovermelho.png" alt="porco-vermelho" class="porco-vermelho">
+            </div>
+            
+            <div class="porcos">
+                <img src="https://raw.githubusercontent.com/nickdiegao/imagens/main/porcos.png" alt="porco-azul" class="porco-azul">
+            </div>
+
+            <div class="porcos">
+                <img src="https://raw.githubusercontent.com/nickdiegao/imagens/main/porquinhoverde.png" alt="porco-vermelho" class="porco-verde">
+            </div>
+        </div>
+
+        <div class="imagens-casas">
+            <div class="casa">
+                <img src="https://raw.githubusercontent.com/nickdiegao/imagens/main/kisspng-the-three-little-pigs-clip-art-christmas-home-png-photos-5a78691d7c6221.6612915615178406695095.png" alt="casa-tijolo" class="casa-tijolo">
+            </div>
+            <div class="casa">
+                <img src="https://raw.githubusercontent.com/nickdiegao/imagens/main/kisspng-goldilocks-and-the-three-bears-clip-art-openclipar-5ba1178301b403.379777351537283971007.png" alt="casa-madeira" class="casa-madeira">
+            </div>
+            <div class="casa">
+                <img src="https://raw.githubusercontent.com/nickdiegao/imagens/main/kisspng-the-three-little-pigs-fairy-tale-little-red-riding-palha-5b2019a95bf3a1.5125063915288303773767.png" alt="casa-palha" class="casa-palha">
+            </div>
+        </div>
+
+        <div class="prg">
+            Programação Desplugada
+        </div>
+
+    </div>
+
+</body>
+</html>

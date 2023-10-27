@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.tabela-centralizada{
+    margin: 0 auto;
+    width: 60%px;
+    height: 800px;
+}
